@@ -1,0 +1,47 @@
+body {
+	font-family: Times, sans-serif;
+	background-color: #0aa1bf;
+	margin: 0;
+	padding: 10px;
+	}
+h1	{
+	color: #000000;
+	text-align: center;
+	font-family: Times, sans-serif;
+	}
+h2 	{
+	text-align: center;
+	font-family: Times, sans-serif
+}
+#NAVI1 {
+	position: relative; left: 450px;
+}
+p   {
+	font-family: Times, sans-serif;
+	color: #000000;
+	line-height: 2;
+	margin: 10px 10px;
+	font-size: 17px;
+	text-align: justify;
+	}
+.Sklad {
+	font-family: Times, sans-serif;
+	font-size: 17px;
+	text-align: justify;
+	line-height: 2;
+}
+button {
+	background-color: white;
+	color: black;
+	border: none;
+	padding: 10px; 20px;
+	cursor: pointer;
+	position: relative; left: 650px;
+	}
+	button:hover {
+	background-color: #4de8af;
+	}
+.Page-2 button {
+	position: relative; left: 650px;
+	position: relative; Top: 220px;
+}
