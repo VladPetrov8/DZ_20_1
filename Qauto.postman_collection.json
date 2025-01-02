@@ -353,6 +353,23 @@
 			"name": "Expenses",
 			"event": [
 				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status OK\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.status).to.eql(\"ok\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
 					"listen": "prerequest",
 					"script": {
 						"exec": [
@@ -371,24 +388,6 @@
 							"// Генерация случайного числа от 300 до 350\r",
 							"var randomNumber = Math.floor(Math.random() * (350 - 300 + 1)) + 300; // Случайное число от 300 до 350\r",
 							"pm.variables.set(\"Expenses 1\", randomNumber); // Сохранение в локальную  переменную"
-						],
-						"type": "text/javascript",
-						"packages": {}
-					}
-				},
-				{
-					"listen": "test",
-					"script": {
-						"exec": [
-							"pm.test(\"Status code is 200\", function () {\r",
-							"    pm.response.to.have.status(200);\r",
-							"});\r",
-							"\r",
-							"pm.test(\"Status OK\", function () {\r",
-							"    var jsonData = pm.response.json();\r",
-							"    pm.expect(jsonData.status).to.eql(\"ok\");\r",
-							"});\r",
-							"pm.environment.set(\"Expenses\", \"randomNumber\");"
 						],
 						"type": "text/javascript",
 						"packages": {}
