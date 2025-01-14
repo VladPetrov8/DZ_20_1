@@ -104,4 +104,3 @@ values
 insert into cars (usersId, carBrandId, carModelId, mileage, initialMilleage)
 values
     ((SELECT id FROM users WHERE id = 5), (SELECT id FROM car_brands WHERE title = 'Fiat'), (SELECT id FROM car_models WHERE title = 'Panda'), 650, 551);
-    
